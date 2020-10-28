@@ -21,6 +21,7 @@ export class UserForm extends Component {
     this.setState({
       step: step + 1,
     });
+    console.log('Cambia de ventana')
   };
 
   //Regresa al paso anterior
@@ -29,11 +30,12 @@ export class UserForm extends Component {
     this.setState({
       step: step - 1,
     });
+    console.log('Cambia de ventana')
   };
 
   //Manejador de cambios de campos.
-  handleChange = (input) => (e) => {
-    this.setState({ [input]: e.targer.value });
+  handleChange = input => e => {
+    this.setState({ [input]: e.target.value });
   };
 
   render() {
